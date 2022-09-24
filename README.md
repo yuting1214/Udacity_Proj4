@@ -14,11 +14,11 @@
 
 ### Create a Sagemaker instance for model training and deployment.
 
-[Instance](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/instance.png)
+![Instance](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/instance.png)
 
 ### Deployed Endpoint
 
-[Endpoint](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/endpoint.png)
+![Endpoint](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/endpoint.png)
 
 Create one noraml endpoint and one endpoint with autoscaling to compare the difference.
 
@@ -28,17 +28,17 @@ Choose an EC2 instance of ml.m5.xlarge since using the Accelerated Computing ins
 
 Remember to activate AWS Deep Learning AMIs to use the prebuilt configuration.
 
-[EC2](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/ec2.png)
+![EC2](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/ec2.png)
 
 ## Step 3. Setting up a Lambda function
 
 Set up policy.
 
-[Policy]([plots](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/lambda_iam.png))
+![Policy](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/lambda_iam.png)
 
 Deploy a lambda function
 
-[Lambda](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/lambda_function_test.png)
+![Lambda](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/lambda_function_test.png)
 
 ## Step 4. Lambda function security
 
@@ -48,4 +48,4 @@ For conveneince, I attach the full access of service like AmazonSageMakerFullAcc
 
 Set up an endpoint with auto-scaling.
 
-[auto](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/auto_scaling_config.png)
+![auto](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/auto_scaling_config.png)
