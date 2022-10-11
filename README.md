@@ -16,11 +16,16 @@
 
 ![Instance](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/instance.png)
 
-### Deployed Endpoint
+### Deploy Endpoint
 
 ![Endpoint](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/endpoint.png)
 
 Create one noraml endpoint and one endpoint with autoscaling to compare the difference.
+
+### Test Endpoint
+
+![Test](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/new_endpoint_test.png)
+
 
 ## Step 2. EC2 Training
 
