@@ -78,7 +78,7 @@ Types of Concurrency:
 
 Autoscaling allows your deployed endpoints to respond to multiple requests at the same time.
 
-In our case, to address the issues of latency, we set up an auto-scaling for the endpoint with 4 stand-by instances. When the incoming requests exceeds the capacity of a single instance, the auto-scaling would increate the number of instances to maintain a smooth traffic for end users.
+In our case, to address the issues of latency, we set up an auto-scaling for the endpoint. When the incoming requests exceeds the specified threshold, the auto-scaling would automatically increate the number of instances to maintain a smooth traffic for end users.
 
 
 ![auto](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/auto_scaling_config.png)
