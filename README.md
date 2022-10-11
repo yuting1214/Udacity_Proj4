@@ -49,8 +49,36 @@ Deploy a lambda function
 
 For conveneince, I attach the full access of service like AmazonSageMakerFullAccess, but doing this would cause security vulnerabilities.
 
+Why is this dangerous?
+
+Having an IAM policy that allows all possible permissions for all possible services is a direct violation of the security principle of  least privilege. If a malicious actor were to gain access to a user or role with such a policy, they would have unlimited access to everything in your AWS account, and then it’s game over. It’s a better practice to assign only the permissions necessary, and nothing more.
+
+[Reference](https://www.fugue.co/blog/6-big-aws-iam-vulnerabilities-and-how-to-avoid-them)
+
 ## Step 5. Concurrency and auto-scaling
 
-Set up an endpoint with auto-scaling.
+Why should we need to consider Concurrency and auto-scaling?
+
+During the stage of project buildling, the transmitted traffic will be trivial, Since the users in this case would mainly be you and your team. Your team is probably much smaller than the group of users who will use the project after it's deployed.
+
+After a project is deployed, it will probably experience much more traffic. Moreover, the traffic it experiences may be unexpected: you may have an unexpected volume of users, or users may access your project at unexpected times or in unexpected ways.
+
+High traffic requires heavy loads on your computing resources, and this can lead to slower response times. The delay that a computing resource has when it responds to a request is called latency. The higher the latency, the worse the user experiences.
+
+Therefore, Concurrency and Auto-scaling are two main solution in AWS to address the latency issues.
+
+
+Comparison of Concurrency and Auto-Scaling.
+
+Concurrency refers to the ability of a **Lambda function** to serve multiple requests simultaneously.
+
+Types of Concurrency:
+* Reserved Concurrency: Guarantee a maxium number of instances
+* Provisioned Concurrency: Always-on instances ready to respond
+
+Autoscaling allows your deployed endpoints to respond to multiple requests at the same time.
+
+In our case, to address the issues of latency, we set up an auto-scaling for the endpoint with 4 stand-by instances. When the incoming requests exceeds the capacity of a single instance, the auto-scaling would increate the number of instances to maintain a smooth traffic for end users.
+
 
 ![auto](https://github.com/yuting1214/Udacity_Proj4/blob/main/plots/auto_scaling_config.png)
